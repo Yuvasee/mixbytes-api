@@ -34,7 +34,7 @@ MongoClient.connect(db.url, (err, db) => {
     tBot.sendMessage(tGroupId, `Подписался на новости о школе: ${req.body.address}`);
   });
 
-  bot.on('message', (msg) => {
+  tBot.on('message', (msg) => {
     if (msg.text.toLowerCase().indexOf('ping') === 0) {
       bot.sendMessage(msg.chat.id, 'pong!');
     }
